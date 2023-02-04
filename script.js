@@ -1,13 +1,6 @@
 {
     const tasks = [
-        {
-            content: "obejrzyj film",
-            done:true,
-        },
-        {
-            content: "zrobić stronę",
-            done:false,
-        }
+        
     ];
 
     const render = () => {
@@ -16,14 +9,16 @@
         for(const task of tasks) {
             htmlString += `
                 <li class="list__item${task.done ? " list__item--done" : ""}">
-                <button class="js-doneTask">Zrobione?</button>
-                <button class="js-removeTask">Usuń</button>
-                ${task.content}
+                <button class="js-doneTask button__done">${task.done ? " &#10004" : ""}</button>
+                <p class="task__content">${task.content}</p>
+                <button class="js-removeTask button__delete">&#128465</button>
                 </li>
             `;
         }
 
         document.querySelector(".js-tasksList").innerHTML = htmlString;
+
+        
         
         const removeButtons = document.querySelectorAll(".js-removeTask");
 
@@ -79,6 +74,12 @@
 
         form.addEventListener("submit", onFormSubmit);
     }
+    const onButtonFocus = document.querySelector(".js-buttonFocus");
+
+        onButtonFocus.addEventListener("click", () => {
+            document.querySelector(".js-textfieldFocus").focus();
+            
+        })
 
     init();
 }
