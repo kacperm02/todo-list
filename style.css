@@ -12,7 +12,7 @@
 
 .flex__item {
     padding: 20px;
-    margin:50px;
+    margin:25px 50px;
     max-width: 600px;
     width: 80%;
     border: 1px solid black;
@@ -36,7 +36,16 @@
     grid-template-columns: 2fr 1fr;
 }
 
+@media  (max-width: 767px) {
+    .form__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .form__button {
+    padding: 10px;
+    font-size: 20px;
     border: none;
     background-color:teal;
     color:white;
@@ -75,12 +84,13 @@
 }
 
 .button__delete:hover {
-    background-color: hsl(0, 98%, 45%)
+    background-color: hsl(0, 98%, 45%);
+    transition: 0.5s;
 }
 
 .button__done:hover {
     background-color: hsl(120, 98%, 45%);
-    
+    transition: 0.5s;
 }
 
 .task__content {
