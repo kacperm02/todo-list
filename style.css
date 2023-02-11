@@ -2,6 +2,7 @@
 .body {
     background-color: rgb(227, 227, 227);
     font-family: 'Lato', sans-serif;
+    word-break: break-word;
 }
 
 .container {
@@ -67,7 +68,7 @@
     margin: 10px 0;
 }
 
-.button__done {
+.task__button {
     border:none;
     background-color: hsl(120, 98%, 35%);
     width: 50px;
@@ -75,20 +76,16 @@
     color:white;
 }
 
-.button__delete {
-    border:none;
+.task__button--remove {
     background-color: hsl(0, 98%, 35%);
-    width: 50px;
-    height: 50px;
-    color:white;
 }
 
-.button__delete:hover {
+.task__button--remove.task__button--remove:hover {
     background-color: hsl(0, 98%, 45%);
     transition: 0.5s;
 }
 
-.button__done:hover {
+.task__button:hover {
     background-color: hsl(120, 98%, 45%);
     transition: 0.5s;
 }
